@@ -1,0 +1,131 @@
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+    "email": "restaurant@gmail.com",
+    "name":"restaurant",
+    "password":"restaurant12",
+    "passwordCheck":"restaurant12",
+    "role":"RESTAURANT",
+    "bankName":"Mega Bank",
+    "bankAccountNumber":1
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "restaurant@gmail.com",
+    "password":"restaurant12"
+}
+
+###
+GET http://localhost:3000/loggedin
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+###
+POST http://localhost:3000/create-product
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+{
+    "name":"Fish and chips",
+    "description":"Newly made fish with fresh fried chips.",
+    "price":25,
+    "image": "https://www.comedera.com/wp-content/uploads/2022/11/fish-and-chips.jpg"
+}
+
+###
+PATCH http://localhost:3000/update-product/63d58d8dcfe741a5531f7433
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+{
+    "description":"Fish cooked today with fresh fried chips."
+}
+
+###
+DELETE  http://localhost:3000/delete-product/63d58d8dcfe741a5531f7433
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+###
+GET  http://localhost:3000/products
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+###
+GET  http://localhost:3000/product/63d58d8dcfe741a5531f7433
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q1NDMxM2I4YWMyYmJiY2EzOWU4YjQiLCJyb2xlIjoiUkVTVEFVUkFOVCIsImlhdCI6MTY3NDkzNzUzN30.Hy54syn7gn0to3vY525zvLsHK8DBk6SqFI1a5LF_--Y
+
+###
+POST http://localhost:3000/addtocart
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+{
+    "productId":"63d58d8dcfe741a5531f7433"
+}
+
+###
+GET  http://localhost:3000/cart
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc2MDYwNDgwfQ.9VPstNKTsU_YXAbvYzEva6S1kpNBpI3xEB_JfsqPrYo
+
+###
+POST http://localhost:3000/reducecart/63d58d8dcfe741a5531f7433
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+###
+POST http://localhost:3000/removecart/63d58d8dcfe741a5531f7433
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+###
+POST http://localhost:3000/clearcart
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+###
+POST http://localhost:3000/create-order
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+{
+    "city":"New York",
+    "street":"92nd Street",
+    "resNum":920,
+    "apartment":false,
+    "zip":12,
+    "paymentType":"Debit",
+    "nameOnCard":"John Doe",
+    "expiration":"07/25",
+    "cvv":123
+}
+
+###
+GET http://localhost:3000/orders
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+###
+GET http://localhost:3000/order/63d7dd54ef16543d4d90086c
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc1MDA3NjUyfQ.7k_gZbx8eNRmU50Aludg2SyYlONC8Cuml3BoNRkcFzg
+
+###
+GET http://localhost:3000/cart/products
+Content-Type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2M2Q2OTZhNDMzODY3NGRlMTc2NmNlYzAiLCJyb2xlIjoiQ0xJRU5UIiwiaWF0IjoxNjc2MDYwNDgwfQ.9VPstNKTsU_YXAbvYzEva6S1kpNBpI3xEB_JfsqPrYo
+
+{
+    "cart": [
+        {
+            "productId": "63d97e7a3cff097e227f38cd",
+            "quantity": 2
+        }
+    ]
+}
